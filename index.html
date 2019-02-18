@@ -27,87 +27,53 @@
 
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ericsitarz.com</title>
-    <style>
-        body {
-            display: grid;
-            width: 100vw;
-            height: 100vh;
-            place-items: center center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ericsitarz.com</title>
+  <style>
+    body {
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      place-items: center center;
+    }
 
-        button {
-            border-radius: 5px;
-            padding: 0 5rem;
-            outline: none;
-            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
-        }
+    button {
+      border-radius: 5px;
+      padding: 0 5rem;
+      outline: none;
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+    }
 
-        h1 {
-            font-family: 'UnifrakturCook', cursive;
-            word-wrap: break-word;
-            font-size: 5rem;
-            transition: font-size 25s ease-in-out;
-            cursor: pointer;
-        }
-    </style>
-   
-    <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
+    h1 {
+      font-family: 'UnifrakturCook', cursive;
+      word-wrap: break-word;
+      font-size: 5rem;
+      transition: font-size 25s ease-in-out;
+      cursor: pointer;
+    }
+  </style>
 
-    <!--   Favicon   -->
-    <link rel="apple-touch-icon" sizes="57x57" href="_favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="_favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="_favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="_favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="_favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="_favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="_favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="_favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="_favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="_favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="_favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="_favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="_favicon/favicon-16x16.png">
-    <link rel="manifest" href="_favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="_favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="192x192" href="_favicon/android-icon-192x192.png">
 </head>
 
 <body>
-    <button id="genNew">
-        <h1 aria-label="click me to change the background color">ericsitarz.com</h1>
-    </button>
+  <button id="genNew">
+    <h1 aria-label="click me to change the background color">ericsitarz.com</h1>
+  </button>
 </body>
 <script>
-    const setBg = () => {
-        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        document.body.style.backgroundColor = "#" + randomColor;
-    }
+  const setBg = () => {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+    color.innerHTML = "#" + randomColor;
+  }
 
-    genNew.addEventListener("click", setBg);
-    setBg();
+  genNew.addEventListener("click", setBg);
+  setBg();
 </script>
 
 </html>

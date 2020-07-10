@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--  👋👋👋👋👋👋👋👋👋👋👋👋                                                -->
-<!--  oh hai y'all!                                                        -->
-<!--  y'found my "secret" message nested in the inspector.                 -->
+<!--  👋👋👋👋👋👋👋👋👋👋👋👋                                                          -->
+<!--  oh hai y'all!                                                                         -->
+<!--  y'found my "secret" message nested in the inspector.                                    -->
 <!--  I'm not upkeeping a sexy portfolio atm, but my latest site design is musicgoround.com, playitagainsports.com, style-encore.com. It's a pretty cool project, email me and I'll tell you about it.  -->
 <!--  Also checkout ordercloud.io, where I was fortunate enough to collaborate on rebuilding our Documentation + Developer Portal using Gatsby.    -->
 <!--  ttyl 😙, eric (hello@ericsitarz.com)   -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ericsitarz.com</title>
-  <style>
-    body {
-      display: grid;
-      width: 100vw;
-      height: 100vh;
-      place-items: center center;
-      margin: 0;
-      padding:0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ericsitarz.com</title>
+    <style>
+        body {
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            place-items: center center;
+            margin: 0;
+            padding: 0;
+        }
 
-    button {
-      border-radius: .5rem;
-      padding: 0 5rem;
-      outline: none;
-      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
-      cursor: pointer;
-    }
+        button {
+            border-radius: .5rem;
+            padding: 0 5rem;
+            outline: none;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+        }
 
-    h1 {
-      font-family: 'UnifrakturCook', cursive;
-      word-wrap: break-word;
-      transition: font-size .5s ease-in-out;
-      font-size: clamp(2rem, 3vw, 5rem);
-      cursor: pointer;
-    }
-  </style>
+        h1 {
+            font-family: 'UnifrakturCook', cursive;
+            word-wrap: break-word;
+            transition: font-size .5s ease-in-out;
+            font-size: clamp(2rem, 3vw, 5rem);
+            cursor: pointer;
+        }
+    </style>
 
-  <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="192x192" href="_favicon/android-icon-192x192.png">
+    <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
+
+    <!--  favicon here using realfavicongenerator.net -->
+    <link rel="apple-touch-icon" sizes="180x180" href="_favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="_favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="_favicon/favicon-16x16.png">
+    <link rel="manifest" href="_favicon/site.webmanifest">
+    <link rel="mask-icon" href="_favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da2c4d">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
-  <button type="button" id="genNew" title="(click me to change the background color)">
-    <h1 aria-label="welcome to my website!">ericsitarz.com</h1>
-  </button>
+    <button type="button" id="genNew" title="(click me to change the background color)">
+        <h1 aria-label="welcome to my website!">ericsitarz.com</h1>
+    </button>
 </body>
 <script>
-  const setBg = () => {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    document.body.style.backgroundColor = "#" + randomColor;
-    color.innerHTML = "#" + randomColor;
-  }
+    const setBg = () => {
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = "#" + randomColor;
+        color.innerHTML = "#" + randomColor;
+    }
 
-  genNew.addEventListener("click", setBg);
-  setBg();
+    genNew.addEventListener("click", setBg);
+    setBg();
 </script>
 
 </html>

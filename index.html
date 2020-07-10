@@ -29,14 +29,30 @@
             outline: none;
             box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
             cursor: pointer;
+            position: relative;
+        }
+
+        button::before {
+            content: 'Click!';
+            letter-spacing: .5rem;
+            position: absolute;
+            display: none;
+            bottom: -10rem;
+            left: 0;
+            right: 0;
+            font-size: 3rem;
+            font-family: fantasy;
+            mix-blend-mode: overlay;
+        }
+
+        button:active::before {
+            display: block;
         }
 
         h1 {
-            font-family: 'UnifrakturCook', cursive;
-            word-wrap: break-word;
             transition: font-size .5s ease-in-out;
             font-size: clamp(2rem, 3vw, 5rem);
-            cursor: pointer;
+            font-family: 'UnifrakturCook', cursive;
         }
     </style>
 
@@ -53,7 +69,7 @@
     const setBg = () => {
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         document.body.style.backgroundColor = "#" + randomColor;
-        color.innerHTML = "#" + randomColor;
+        randomColor.innerHTML = "#" + randomColor;
     }
 
     genNew.addEventListener("click", setBg);
